@@ -1,0 +1,303 @@
+*{
+  margin: 0px;
+  padding: 0px;
+  font-size: 62.5%;
+}
+
+h1{
+  font-size: 2rem;
+}
+h2{
+  font-size: 1.5rem;
+}
+p{
+  font-size: 1.2rem;
+} 
+a{
+  font-size: 1.2rem;
+  color: hsl(200, 24%, 40%);
+}
+span{
+  font-size: 1.5rem;
+  margin-top: 10px;
+  color: hsl(4, 69%, 50%);
+}
+.mortgage_details{
+  padding: 20px;
+  height: 60vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  box-sizing: border-box;
+}
+.mortgage_details input{
+  width: 100%;
+  height: 30px;
+  outline: none;
+  border: 1px solid hsl(200, 24%, 40%);
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1.5rem;
+  text-indent: 40px;
+}
+.input_div label{
+  font-size: 1.5rem;
+  margin-bottom: 5px;
+}
+.aiParent{
+  position: relative;
+}
+.amount_input{
+  position: absolute;
+  bottom: -4.2px;
+  left: 1.1px;
+  background-color: hsl(203, 41%, 72%);
+  height: 10px;
+  padding: 10px;
+  width: fit-content;
+  display: flex;
+  align-items: center;
+  border-radius: 5px 0px 0px 5px;
+}
+.term_rates input{
+  text-indent: 10px;
+}
+
+.amount_input2{
+  position: absolute;
+  bottom: -4.2px;
+  left: 284px;
+  background-color: hsl(203, 41%, 72%);
+  height: 10px;
+  padding: 10px;
+  width: fit-content;
+  display: flex;
+  align-items: center;
+  border-radius: 0px 5px 5px 0px;
+}
+.amount_input3{
+  position: absolute;
+  bottom: -4.2px;
+  left: 303.5px;
+  background-color: hsl(203, 41%, 72%);
+  height: 10px;
+  padding: 10px;
+  width: fit-content;
+  display: flex;
+  align-items: center;
+  border-radius: 0px 5px 5px 0px;
+}
+.radio_inputs{
+  height: 90px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.radio_inputs input{
+  width: fit-content;
+  margin: 10px;
+  cursor: pointer;
+}
+.radio_inputs div{
+  width: 100%;
+  height: 30px;
+  outline: none;
+  border: 1px solid hsl(200, 24%, 40%);
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  font-size: 2rem;
+  cursor: pointer;
+}
+.calc_button{
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 40px;
+  outline: none;
+  background-color: hsl(61, 70%, 52%);
+  border-radius: 50px;
+  justify-content: center;
+  cursor: pointer;
+}
+.calc_button img{
+  margin: 10px;
+}
+.calc_button p{
+  font-size: 1.5rem;
+}
+.results{
+  background-color: hsl(202, 55%, 24%);
+  padding: 20px;
+  height: fit-content;
+}
+.results h1{
+  color: hsl(0, 0%, 100%);
+  margin-bottom: 5px;
+}
+.results p{
+  color: hsl(203, 41%, 72%);
+}
+.results_div{
+  background-color: hsl(202, 55%, 16%);
+  padding: 10px;
+  margin-top: 10px;
+  height: fit-content;
+  border-top: 2px solid hsl(61, 70%, 52%);
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.monthly_repayments :nth-child(1){
+  margin-bottom: 5px;
+}
+.monthly_repayments :nth-child(2){
+  margin-bottom: 5px;
+  font-size: 2.5rem;
+  color: hsl(61, 70%, 52%);
+}
+.total_over_time{
+  border-top: 1px solid hsl(200, 24%, 40%);
+}
+.total_over_time :nth-child(1){
+  margin: 10px 0px 5px 0px;
+}
+.total_over_time :nth-child(2){
+  color: hsl(0, 0%, 100%);
+  font-size: 2rem;
+}
+.calculations{
+  display: none;
+}
+
+
+@media screen and (min-width:1440px) {
+  h1{
+    font-size: 2.5rem;
+  }
+  a{
+    font-size: 2.5rem;
+  }
+  body{
+    background-color: hsl(202, 86%, 94%);
+  }
+  main{
+    display: flex;
+    width: 60vw;
+    height: 70vh;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background-color: hsl(0, 0%, 100%);
+    border-radius: 20px;
+    box-shadow: 5px 5px 45px rgba(0, 0, 0, 0.5) ;
+  }
+  label{
+    font-size: 2rem;
+  }
+  .topDawg{
+    display: flex;
+    justify-content: space-between;
+  }
+  .mortgage_details{
+    width: 50%;
+    height: 100%;
+    box-sizing: border-box;
+  }
+  .mortgage_details label{
+    font-size: 2rem;
+  }
+  .mortgage_details input{
+    height: 40px;
+    margin-top: 10px;
+  }
+  .mortgage_details input:focus{
+    border: 1px solid hsl(61, 70%, 52%);
+  }
+  .mortgage_details input:focus ~ .amount_input {
+    background-color: hsl(61, 70%, 52%);
+  }
+  .mortgage_details input:focus ~ .amount_input2 {
+    background-color: hsl(61, 70%, 52%);
+  }
+  .mortgage_details input:focus ~ .amount_input3 {
+    background-color: hsl(61, 70%, 52%);
+  }
+  .term_rates{
+    display: flex;
+    justify-content: space-between;
+  }
+  .term_rates input{
+    width: 180px;
+  }
+  .amount_input{
+    height: 20px;
+  }
+  .amount_input2{
+    height: 20px;
+    left: 118.5px;
+  }
+  .amount_input3{
+    height: 20px;
+    left: 144px;
+  }
+  .radio_inputs div{
+    height: 40px;
+  }
+  .radio_inputs{
+    height: 120px;
+  }
+  .radio_inputs p{
+    font-size: 2rem;
+  }
+  .calc_button{
+    width: 70%;
+    height: 40px;
+  }
+  .calc_button p{
+    font-size: 2rem;
+  }
+  .results{
+    height: 100%;
+    width: 50%;
+    padding: 20px 40px;
+    border-radius: 0px 10px 10px 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-sizing: border-box;
+  }
+  .calc_image{
+    display: flex;height: 100%;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+  }
+  .results p{
+    font-size: 2rem;
+  }
+  .results_div{
+    margin-top: 10px;
+    padding: 50px;
+    height: fit-content;
+  }
+  .monthly_repayments :nth-child(1){
+    margin-bottom: 10px;
+  }
+  .monthly_repayments :nth-child(2){
+    font-size: 7.5rem;
+    color: hsl(61, 70%, 52%);
+  }
+  .total_over_time{
+    border-top: 1px solid hsl(200, 24%, 40%);
+  }
+  .total_over_time :nth-child(1){
+    margin: 40px 0px 10px 0px;
+  }
+  .total_over_time :nth-child(2){
+    color: hsl(0, 0%, 100%);
+    font-size: 4rem;
+  }
+}
