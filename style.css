@@ -192,6 +192,7 @@ span{
 }
 .calculations{
   display: none;
+  height: 40vh;
 }
 
 
@@ -313,7 +314,7 @@ span{
     margin-bottom: 10px;
   }
   .monthly_repayments :nth-child(2){
-    font-size: 7.5rem;
+    font-size: 6.5rem;
     color: hsl(61, 70%, 52%);
   }
   .total_over_time{
