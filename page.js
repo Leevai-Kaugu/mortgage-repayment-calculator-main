@@ -2,15 +2,11 @@ let calc_button = document.querySelector('.calc_button');
 
 calc_button.addEventListener("click",()=>{
   validate();
+
+  calculate();
 });
 
-const radioInput = document.querySelector('.radio_inputs').querySelectorAll('input');
-const radioDiv = document.querySelector('.radio_inputs').querySelectorAll('div');
-if(radioInput[0].checked){
-  radioDiv[0].style.backgroundColor = 'hsl(61, 70%, 52%)'
-}else{
-  console.log(radioDiv[0],radioInput[0])
-}
+
 
 //VALIDATE PAGE & STYLE PAGE
 function validate(){
@@ -23,6 +19,7 @@ function validate(){
   const spn1 = document.querySelector('.err1');
   const spn2 = document.querySelector('.err2');
   const spn3 = document.querySelector('.err3');
+  const spn4 = document.querySelector('.err4');
   const re = /^\d+(\.\d+)?$/;
   const errorMsg = [
     {err1:'This field is required',
@@ -75,12 +72,15 @@ function validate(){
  };
  //STYLE TEXT INPUT VALIDATION
  //STYLE RADIO INPUT VALIDATION
-  const radioInputs = document.querySelector('.radio_inputs')
-  const parentDiv = radioInputs.querySelectorAll('div')
-  parentDiv.addEventListener("click",function(){
-    console.log(this.input.id)
-  })
-  
+  const radioInputs = document.querySelector('.radio_inputs').querySelectorAll('input');
+  if(radioInputs[0].checked||radioInputs[1].checked){
+    console.log('checked')
+  }else{
+    console.log('not yet')
+    spn4.innerHTML = errorMsg[0].err1
+  }
  //STYLE RADIO INPUT VALIDATION
 }
 //VALIDATE PAGE & STYLE PAGE
+
+
