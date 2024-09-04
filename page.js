@@ -123,7 +123,14 @@ function calculate(){
     return total
   }
   
-  
+  function formatNumber(num) {
+    let str = num.toString();
+    return str.replace(/\B(?=(\d{3})+(?!\d))/g, ',');
+  }
+
+let totalAmount = formatNumber(calculateTotalPayment().toFixed(2));
+let totalMonthly = formatNumber(calculateMonthlyPayment().toFixed(2));
+
   if(document.querySelector('#repayment').checked){
     resultsDiv.querySelector('.calculations').innerHTML = `
       <div>
@@ -133,11 +140,11 @@ function calculate(){
           <div class="results_div">
           <div class="monthly_repayments">
             <p>Your monthly repayments</p>
-            <p>£${calculateMonthlyPayment().toFixed(2)}</p>
+            <p>£${totalMonthly}</p>
           </div>
           <div class="total_over_time">
             <p>Total you'll repay over the term</p>
-            <p>£${calculateTotalPayment().toFixed(2)}</p>
+            <p>£${totalAmount}</p>
           </div>
        </div>
     `
@@ -150,7 +157,7 @@ function calculate(){
           <div class="results_div">
           <div class="monthly_repayments">
             <p>Your monthly repayments</p>
-            <p>£${calculateMonthlyPayment().toFixed(2)}</p>
+            <p>£${calculateMonthlyPayment().toFixed(2).toLocaleString()}</p>
           </div>
        </div>
   `

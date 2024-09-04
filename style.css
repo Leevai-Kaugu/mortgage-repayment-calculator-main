@@ -40,6 +40,18 @@ span{
   font-size: 1.5rem;
   text-indent: 40px;
 }
+.mortgage_details input:focus{
+  border: 1px solid hsl(61, 70%, 52%);
+}
+.mortgage_details input:focus ~ .amount_input {
+  background-color: hsl(61, 70%, 52%);
+}
+.mortgage_details input:focus ~ .amount_input2 {
+  background-color: hsl(61, 70%, 52%);
+}
+.mortgage_details input:focus ~ .amount_input3 {
+  background-color: hsl(61, 70%, 52%);
+}
 .input_div label{
   font-size: 1.5rem;
   margin-bottom: 5px;
@@ -237,18 +249,7 @@ span{
     height: 40px;
     margin-top: 10px;
   }
-  .mortgage_details input:focus{
-    border: 1px solid hsl(61, 70%, 52%);
-  }
-  .mortgage_details input:focus ~ .amount_input {
-    background-color: hsl(61, 70%, 52%);
-  }
-  .mortgage_details input:focus ~ .amount_input2 {
-    background-color: hsl(61, 70%, 52%);
-  }
-  .mortgage_details input:focus ~ .amount_input3 {
-    background-color: hsl(61, 70%, 52%);
-  }
+ 
   .term_rates{
     display: flex;
     justify-content: space-between;
